@@ -10,6 +10,6 @@ public class CustomerService {
 
     @Async("asyncDefaultExecutor")
     public void asyncMethodWithConfiguredExecutor() {
-        log.info("Execute method with configured executor - "+ Thread.currentThread().getName());
+        log.info("Execute method with configured executor async - "+ Thread.currentThread().getName());
     }
 }
