@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multithread-deployment
+  labels:
+    app: multithread
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: multithread
+  template:
+    metadata:
+      labels:
+        app: multithread
+    spec:
+      containers:
+        - name: multithread-container
+          image: dvvdoficial/multithread
+          ports:
+            - containerPort: 8080
