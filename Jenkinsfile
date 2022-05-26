@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Arquivar JAR') {
            steps {
-               archive 'target/multithread.jar'
+               archiveArtifacts artifacts: 'target/multithread.jar', allowEmptyArchive: true
            }
         }
         stage('Building image Docker') {
