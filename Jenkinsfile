@@ -6,12 +6,10 @@ pipeline {
         IMAGE_DOCKER = ''
         EMAIL_TO = 'u2dtecnologia@gmail.com'
     }
-
     tools {
             maven '3.8.5'
             jdk 'OpenJDK-8'
     }
-
     stages {
         stage('Git checkout') {
         	steps {
