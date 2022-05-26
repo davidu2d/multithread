@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         REPOSITORY_DOCKER = 'u2dtecnologia/multithread'
-        CREDENTIAL_DOCKER = 'u2dtecnologia'
+        CREDENTIAL_DOCKER = 'dockerhub'
         IMAGE_DOCKER = ''
         EMAIL_TO = 'u2dtecnologia@gmail.com'
     }
