@@ -30,13 +30,6 @@ pipeline {
                archiveArtifacts artifacts: 'target/multithread.jar', allowEmptyArchive: true
            }
         }
-        stage('Initialize Docker'){
-            steps {
-                def dockerHome = tool 'myDocker'
-                env.PATH = "${dockerHome}/bin:${env.PATH}"
-            }
-
-        }
         stage('Building image Docker') {
            steps {
                script {
